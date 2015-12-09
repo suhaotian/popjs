@@ -38,4 +38,9 @@ class pop {
 	destroy () {
 		this.body.removeChild(this.container)
 	}
+
+	_flush () {										// http://jsbin.com/qenuxojazi
+		return this.documentElement.offsetWidth     // force layout render to add CSS 3 transition and animate
+	}
 }
+å
