@@ -1,5 +1,13 @@
 'use strict'
 
+
+/** [pop description] */
+/* 
+ * @Todo: CSS 3 transition and animation 
+ * @Todo: alert/toast... CSS finish
+ * 
+ */
+
 function pop() {
 	this.doc = document
 	this.body = this.doc.body
@@ -28,10 +36,10 @@ p.prompt = function () {
 }
 
 p.show = function () {
-	if (this.doc.body.contains(this.container)) {
+	if (this.body.contains(this.container)) {
 		this.container.style.display = "block"
 	} else {
-		this.doc.body.appendChild(this.container)
+		this.body.appendChild(this.container)
 	}
 	return this
 }
@@ -42,7 +50,7 @@ p.hide = function () {
 }
 
 p.destroy = function () {
-	this.doc.body.removeChild(this.container)
+	this.body.removeChild(this.container)
 	return this
 }
 
